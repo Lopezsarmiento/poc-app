@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-  import { faHeartCirclePlus, faThumbsUp} from '@fortawesome/free-solid-svg-icons'
+import { IoIosHeart, IoIosHeartEmpty } from 'react-icons/io';
 
 const List = ({ pokes }) => {
   return (
@@ -11,7 +10,7 @@ const List = ({ pokes }) => {
           <div>
             <Link to={`/pokemon/${item.name}`}><h2>{item.name}</h2></Link>
           </div>
-          <button><FontAwesomeIcon icon={faHeartCirclePlus} size="2x"/></button>
+          <button><IoIosHeart style = { {fill: 'red', fontSize: "2em" }} /></button>
         </div>
       ))}
     </div>
