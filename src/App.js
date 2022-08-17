@@ -8,7 +8,7 @@ import Navbar from "./components/Navbar";
 
 const admin = {
 	username: 'admin',
-	password: 'pass'
+	password: '1234'
 }
 
 function App() {
