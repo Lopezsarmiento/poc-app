@@ -6,7 +6,7 @@ const Navbar = () => {
       <h1>The Poke App</h1>
       <div className="links">
         <Link to="/">Home</Link>
-        <Link to="/favorite">Favorite Pokemons</Link>
+        <Link to="/favorites">Favorite Pokemons</Link>
       </div>
     </nav>
   );

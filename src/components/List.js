@@ -18,19 +18,20 @@ const List = ({ pokes }) => {
   const handleFav = (item) => {
     const newfavs = favorites;
     newfavs.push(item.name);
+    localStorage.removeItem('favs')
+    localStorage.setItem('favs', JSON.stringify(newfavs));
     setFavorites([...newfavs]);
-    localStorage.setItem("favs", JSON.stringify(favorites));
   };
 
   const handleUnFav = (item) => {
     const newfavs = favorites.filter((fav) => fav !== item.name);
+    localStorage.removeItem('favs')
+    localStorage.setItem('favs', JSON.stringify(newfavs));
     setFavorites([...newfavs]);
-    localStorage.setItem("favs", JSON.stringify(favorites));
   };
 
   return (
     <div className="poke-list">
-      <h2>Pokemons</h2>
       {pokes.map((item) => (
         <div className="poke-preview" key={item.name}>
           <div>
