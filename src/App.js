@@ -7,8 +7,8 @@ import Login from "./components/Login";
 import Navbar from "./components/Navbar";
 
 const admin = {
-	username: 'adminuser',
-	password: 'adminpass'
+	username: 'admin',
+	password: 'pass'
 }
 
 function App() {
@@ -35,13 +35,18 @@ function App() {
     }
   }
 
+  const handleLogout = () => {
+    localStorage.clear()
+    setUser({ name: '', password: ''})
+  }
+
   const isLoggedIn = (user.name === admin.username)
 
 
   return (
     <Router>
       <div className="App">
-        {isLoggedIn && <Navbar/>}
+        {isLoggedIn && <Navbar logout={handleLogout}/>}
         <div className="content">
           <Switch>
             {isLoggedIn && (

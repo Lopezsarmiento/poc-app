@@ -6,6 +6,7 @@ const Login = ({login, error}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 		login(credentials)
+    setCredentials({ name: "", password: "" })
   };
 
   return (
@@ -24,7 +25,7 @@ const Login = ({login, error}) => {
         />
         <label>Password</label>
         <input
-          type="text"
+          type="password"
           required
           value={credentials.password}
           onChange={(e) =>

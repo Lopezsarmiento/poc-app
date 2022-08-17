@@ -31,6 +31,16 @@
   color: #f1356d;
 }
 
+.navbar button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
 .content {
   max-width: 1000px;
   margin: 0px auto;
@@ -93,10 +103,14 @@
   background: #fff;;
   color: #f1356d;
   padding: 8px;
-  margin: 4px;
+  margin: 10px;
   border: 0;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.pagination button:hover {
+  border: 1px solid #f1356d;
 }
 
 .poke-details {
@@ -149,11 +163,20 @@
 }
 
 .login {
-  margin-top: 50px;
+  margin: 20% auto;
   max-width: 600px;
-  margin: 0 auto;
   text-align: center;
 }
+
+.login h2 {
+  margin: 80px;
+}
+
+.login h3 {
+  margin: 20px;
+  color: red;
+}
+
 .login label {
   text-align: left;
   display: block;
